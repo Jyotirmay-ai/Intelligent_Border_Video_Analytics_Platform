@@ -1,0 +1,98 @@
+{
+  "zone_id": "zone-b-restricted",
+  "proximity_bands_m": {
+    "outer_watch": 200.0,
+    "warning": 50.0,
+    "restricted": 15.0
+  },
+  "dwell_time_threshold_s": 120.0,
+  "night_multiplier": 0.6,
+  "group_size_baseline": 2,
+  "group_size_alert": 3,
+  "speed_thresholds_mps": {
+    "slow": 0.3,
+    "fast": 3.5
+  },
+  "path_linearity_max_deviation": 0.4,
+  "posture_flags": ["crouch", "crawl", "climb", "prone"],
+  "posture_sustain_duration_s": 5.0,
+  "vehicle_idle_threshold_s": 180.0,
+  "vehicle_repeat_pass_window_min": 30.0,
+  "cross_camera_reappearance_window_min": 45.0,
+  "composite_rules": [
+    {
+      "rule_id": "reconnaissance-pattern",
+      "description": "Prolonged loitering in restricted zone during night hours",
+      "conditions": {
+        "dwell_time_exceeded": true,
+        "zone_equals": "restricted",
+        "time_is_night": true
+      },
+      "severity": "high",
+      "enabled": true,
+      "shadow_mode": false
+    },
+    {
+      "rule_id": "coordinated-group-movement",
+      "description": "Group exceeding baseline moving toward boundary during off-hours",
+      "conditions": {
+        "group_size_alert_exceeded": true,
+        "approach_vector_equals": "toward",
+        "off_hours": true
+      },
+      "severity": "high",
+      "enabled": true,
+      "shadow_mode": false
+    },
+    {
+      "rule_id": "possible-breach-attempt",
+      "description": "Active climbing posture detected in restricted zone",
+      "conditions": {
+        "sustained_posture": "climb",
+        "zone_equals": "restricted"
+      },
+      "severity": "critical",
+      "enabled": true,
+      "shadow_mode": false
+    },
+    {
+      "rule_id": "sector-scouting",
+      "description": "Cross-camera re-identification pattern across multiple non-adjacent cameras",
+      "conditions": {
+        "cross_camera_count_gte": 2,
+        "cross_camera_window_valid": true
+      },
+      "severity": "high",
+      "enabled": true,
+      "shadow_mode": false
+    },
+    {
+      "rule_id": "vehicle-surveillance",
+      "description": "Vehicle idling near boundary with repeated patrol passes",
+      "conditions": {
+        "vehicle_idle_exceeded": true,
+        "vehicle_repeat_passes_gte": 2
+      },
+      "severity": "medium",
+      "enabled": true,
+      "shadow_mode": false
+    },
+    {
+      "rule_id": "erratic-evasion-movement",
+      "description": "High speed or erratic evasive movement near warning perimeter",
+      "conditions": {
+        "path_linearity_deviated": true,
+        "speed_is_fast": true,
+        "zone_in": ["warning", "restricted"]
+      },
+      "severity": "high",
+      "enabled": true,
+      "shadow_mode": false
+    }
+  ],
+  "created_by": "system_admin",
+  "approved_by": "supervisor_lead",
+  "version": 1,
+  "updated_at": "2026-09-01T00:00:00Z"
+}
+

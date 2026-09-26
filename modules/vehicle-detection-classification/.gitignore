@@ -1,0 +1,4 @@
+# Large input data and generated training artifacts
+datasets/
+runs/
+__pycache__/

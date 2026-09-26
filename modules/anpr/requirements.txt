@@ -1,0 +1,8 @@
+ultralytics
+easyocr
+opencv-python
+numpy
+pydantic
+pydantic-settings
+httpx
+redis

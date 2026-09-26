@@ -1,0 +1,11 @@
+# ByteTrack settings tuned for long vehicles in the traffic video.
+# Keep tracks alive while a truck is detected as a cab, trailer, or full vehicle
+# on adjacent frames. Application code separately requires stronger evidence
+# before it promotes a truck to the UI/database.
+tracker_type: bytetrack
+track_high_thresh: 0.20
+track_low_thresh: 0.05
+new_track_thresh: 0.30
+track_buffer: 90
+match_thresh: 0.90
+fuse_score: true

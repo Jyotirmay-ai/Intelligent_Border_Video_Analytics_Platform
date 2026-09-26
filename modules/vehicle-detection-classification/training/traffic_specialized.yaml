@@ -1,0 +1,23 @@
+# Custom traffic-object detection dataset for Ultralytics YOLO.
+#
+# Put images and matching YOLO label files under datasets/traffic_specialized.
+# Each label row is: class_id x_center y_center width height (all coordinates normalized).
+path: ../datasets/traffic_specialized
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: two_wheeler
+  1: three_wheeler
+  2: ambulance
+  3: fire_truck
+  4: police_vehicle
+  5: taxi
+  6: delivery_van
+  7: semi_trailer
+  8: tractor
+  9: excavator
+  10: forklift
+  11: electric_scooter
+  12: hoverboard

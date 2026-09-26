@@ -1,0 +1,17 @@
+# Object detection & tracking
+ultralytics
+# bytetrack (Requires manual installation or a C++ compiler)
+
+# Deep learning for fine-grained classification
+torch
+torchvision
+timm
+
+# Image processing
+opencv-python
+redis
+
+# Note: Uncomment the messaging library your team uses
+# pika==1.3.2           # For RabbitMQ
+# confluent-kafka==2.2.0  # For Kafka
+# paho-mqtt==1.6.1      # For MQTT
