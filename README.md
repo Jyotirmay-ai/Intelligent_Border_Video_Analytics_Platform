@@ -207,21 +207,6 @@ The current dashboard code passes ESLint with no errors. There are four non-bloc
 
 ## Documentation
 
-Detailed product and design notes are in [`docs/`](docs/):
 
-| Document | Purpose |
-| --- | --- |
-| [`PROJECT_COMPLETION_STATUS.md`](docs/PROJECT_COMPLETION_STATUS.md) | Current completed-demo status, validation, and failure-isolation model |
-| [`UNIQUE_FEATURE_ROADMAP.md`](docs/UNIQUE_FEATURE_ROADMAP.md) | Presentation-ready differentiators and isolated-module enhancement plan |
-| [`PROJECT_OVERVIEW.md`](docs/PROJECT_OVERVIEW.md) | Single-file summary connecting all project docs |
-| [`ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System-level index, module map, and shared platform services |
-| [`HOW_OUR_GEOFENCE_WORKS.md`](docs/HOW_OUR_GEOFENCE_WORKS.md) | Plain-language explanation of the virtual fence math |
-| [`PROTOTYPE_SCOPE.md`](docs/PROTOTYPE_SCOPE.md) | Module inclusion/exclusion matrix for the prototype build |
-| [`PRD.md`](docs/PRD.md) | Full product requirements (functional, non-functional, risks) |
-| [`PARAMETERS.md`](docs/PARAMETERS.md) | Suspicious-activity detection parameter reference and composite rules |
-| [`design.md`](docs/design.md) | UI design system: colors, typography, layout, and the Alert Rail spec |
-| [`PHASES.md`](docs/PHASES.md) | 8-phase delivery plan from local prototype to field deployment |
-| [`RULES.md`](docs/RULES.md) | Engineering rules: tech choices, boundaries of AI, error handling |
-| [`WORKFLOW.md`](docs/WORKFLOW.md) | Team folder workflow and lead review process |
 
-Some older module-level documents reference earlier folder or sample-video names. The startup scripts and paths in this README reflect the current project layout.
+
