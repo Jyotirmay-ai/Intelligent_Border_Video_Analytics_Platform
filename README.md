@@ -6,7 +6,7 @@ IBVAP is a local, software-first border-security command prototype. It turns CCT
 
 
 
-https://youtu.be/5O0Qq8WxJ6Y
+[![Watch the IBVAP demo](https://img.youtube.com/vi/5O0Qq8WxJ6Y/hqdefault.jpg)](https://youtu.be/5O0Qq8WxJ6Y)
 
 
 
